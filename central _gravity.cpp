@@ -46,7 +46,7 @@ class Ball{
         float velX;
         float velY;
         float G = 300;
-        float r_factor= 0.0005;
+        float r_factor= 0.0005; //damping factor
         float gravity=0;
     private:
         void render(){
