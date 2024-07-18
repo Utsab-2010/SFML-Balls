@@ -136,7 +136,7 @@ int main(){
         dt = clock.restart().asSeconds();
 
 
-        std::cout << dt << std::endl;
+        std::cout << "dt:"<< dt << std::endl;
 
         window.display();
     }
