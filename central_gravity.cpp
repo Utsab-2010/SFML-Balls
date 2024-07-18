@@ -110,10 +110,12 @@ int main(){
     for(int i=0;i<ball_count;i++){
         Balls.push_back(Ball(5,sf::Color::Cyan));
     }
+    sf::Clock clock;
+    float dt;
 
     while(window.isOpen()){
         window.clear();
-        sf::Event event;
+        sf::Event event; 
         sf::Mouse mouse;
         
         while (window.pollEvent(event)){
@@ -130,7 +132,12 @@ int main(){
                 Balls[i].update(mouse.getPosition(window).x,mouse.getPosition(window).y);
             }
         }    
-            
+        
+        dt = clock.restart().asSeconds();
+
+
+        std::cout << dt << std::endl;
+
         window.display();
     }
 }
